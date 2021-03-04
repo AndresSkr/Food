@@ -1,0 +1,17 @@
+.card-food {
+    flex: 1 250px;
+    padding: 2px 5px 2px 5px;
+    margin: 1rem;
+}
+.offer{
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    width: auto;
+}
+.available{
+    text-align: center;
+    color: white;
+    background-color: red;
+    width: auto;
+}

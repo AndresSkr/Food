@@ -1,8 +1,17 @@
 <p>food-list works!</p>
 
+<div class="container">
+    <div class="d-flex flex-wrap">
+    <div class="card card-food d-flex flex-column justify-content-between ml-3 m-3" *ngFor="let item of food" (click)="clickSelectItem(item)">
+       
+        <img class="card-img-top" src="{{item.image}}" alt="">
 
-<div *ngFor="let item of food" (click)="clickSelectItem(item)">
-    <p>
-        {{item.name}}
-    </p>
+        <div class="card-body">
+            <h4 class="offer" *ngIf="item.deal">OFFER</h4>
+            <h5> {{item.name}} - {{item.codebar}}</h5> 
+            <h5 class="d-flex justify-content-end">$$ {{item.price}}</h5>
+            <h5 *ngIf="!item.available" class="available">SOLD OUT</h5>
+        </div>
+    </div>
+</div>
 </div>

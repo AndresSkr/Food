@@ -14,9 +14,7 @@ export class FactureComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   finish(confirmBuy){
-
     this.FinishedBuy.emit(confirmBuy);
   }
 

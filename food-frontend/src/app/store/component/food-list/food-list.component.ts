@@ -15,9 +15,16 @@ export class FoodListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
   clickSelectItem(item){
 
-     this.selectedClick.emit(item); 
+    if(item.available){
+      this.selectedClick.emit(item); 
+    }else{
+      alert('Item not available')
+    }
+     
   }
 
 }
