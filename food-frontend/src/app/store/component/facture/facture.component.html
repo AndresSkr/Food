@@ -1,0 +1,13 @@
+
+
+<ul>
+    <li *ngFor="let itemCarShop of carShop">
+        {{itemCarShop.name}}
+        <ol *ngFor="let customItemBuy of itemCarShop.steps">
+            {{customItemBuy}}
+        </ol>
+        <ol><strong>$$</strong>{{itemCarShop.price}}</ol>
+    </li>
+</ul>
+
+<button (click)="buy()">Buy</button>

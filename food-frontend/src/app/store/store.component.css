@@ -1,0 +1,28 @@
+
+
+
+
+/* @media screen  { */
+    .list {
+        background-color: #dd770d;
+        width: 60%;
+        height: 960px;
+        border: 1px dotted black;
+        overflow-y: scroll;
+        /* Add the ability to scroll */
+    }
+    .facture {
+        background-color: #a2b3a3;
+        width: 40%;
+        height: 960px;
+        border: 1px dotted black;
+        overflow-y: scroll;
+        /* Add the ability to scroll */
+    }
+    .list::-webkit-scrollbar {
+        display: none;
+    }
+    .facture::-webkit-scrollbar {
+        display: none;
+    }
+/* } */
