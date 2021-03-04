@@ -1,8 +1,12 @@
-<p>food-list works!</p>
 
 <div class="container">
+    <div class="title">
+        <h1>LIST FOOD</h1>
+    </div>
+    
+
     <div class="d-flex flex-wrap">
-    <div class="card card-food d-flex flex-column justify-content-between ml-3 m-3" *ngFor="let item of food" (click)="clickSelectItem(item)">
+    <div class="card card-food d-flex flex-column justify-content-between m-3 animate__animated animate__bounceIn" *ngFor="let item of food" (click)="clickSelectItem(item)">
        
         <img class="card-img-top" src="{{item.image}}" alt="">
 

@@ -1,30 +1,40 @@
-<div class="container">
 <h1>Facture</h1>
-    <ul>
-        <li *ngFor="let itemCarShop of carShop">
-            {{itemCarShop.name}}
-            <ol *ngFor="let customItemBuy of itemCarShop.steps">
-                {{customItemBuy}}
-            </ol>
-            <ol>{{itemCarShop.price | currency: "COP":"symbol":'3.0'}}</ol>
-        </li>
-    </ul>
+<hr>
+<ul>
+    <li class="animate__animated animate__rollIn" *ngFor="let itemCarShop of carShop">
+        <h5>{{itemCarShop.name}}</h5>
+        <ol *ngFor="let customItemBuy of itemCarShop.steps">
+            <p>{{customItemBuy}}</p>
+        </ol>
+        <ol>
+            <h5>{{itemCarShop.price | currency: "COP":"symbol":'3.0'}}</h5>
+        </ol>
+    </li>
+</ul>
 
-    <div *ngIf="total != 0">
-        <div class="total">
-            Total: <strong>{{total | currency: "COP":"symbol":'3.0'}}</strong>
-        </div>
+<div *ngIf="total != 0">
+    <div class="total">
+        Total: <strong>{{total | currency: "COP":"symbol":'3.0'}}</strong>
+    </div>
 
-        <div class="conte">
-            <div class="row">
-                <div class="col-6">
-                    <button (click)="buy()" class="btn btn-primary">Buy</button>
-                </div>
-                <div class="col-6" >
-                    <button (click)="cancelBuy()" class="btn btn-danger">Cancelar</button>
-                </div>
+    <div class="conte">
+        <div class="row">
+            <div class="col-6">
+                <button (click)="buy()" class="btn btn-primary">
+                    <h3>BUY</h3><span class="material-icons">
+                        add_shopping_cart
+                    </span>
+                </button>
+            </div>
+            <div class="col-6">
+                <button (click)="cancelBuy()" class="btn btn-danger">
+
+                    <h3>CANCEL</h3><span class="material-icons">
+                        dangerous
+                    </span>
+                </button>
             </div>
         </div>
-       
     </div>
+
 </div>

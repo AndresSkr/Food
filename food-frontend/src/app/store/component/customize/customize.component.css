@@ -1,0 +1,11 @@
+.card-item{
+    flex: 1 250px;
+    padding: 2px 5px 2px 5px;
+    margin: 1rem;
+    background: none;
+    border: 0;
+}
+.btn-add{
+    border-radius: 50%;
+    background-color: #c0392b ;
+}

@@ -9,7 +9,7 @@ function createWindow () {
     }
   })
 
-  win.loadFile('./dist/sample/index.html')
+  win.loadFile('./dist/food-frontend/index.html')
 }
 
 app.whenReady().then(createWindow)

@@ -1,15 +1,29 @@
-
 <h1>{{itemBuy.name}}</h1>
-<div *ngFor="let item of itemBuy.steps; let i = index">
-    <div *ngIf="control==i">
-        {{item.name}}
-        
-        <div *ngFor="let option of item.items" class="p-2 m-2" (click)="select(option.name)">
-            {{option.name}}
-            <img src="{{option.image}}" alt="">
+
+<div class="container">
+    <div *ngFor="let item of itemBuy.steps; let i = index">
+        <div *ngIf="control==i">
+            <h2>{{item.name}}</h2>
+    
+    
+            <div class="d-flex flex-wrap">
+                <div *ngFor="let option of item.items" class="p-2 m-2" (click)="select(option.name)">
+                    <div class="card card-item d-flex flex-column justify-content-between m-3 animate__animated animate__zoomInDown">
+    
+                        <h3>  {{option.name}}</h3>
+                      
+                        <img class="card-img-top" src="{{option.image}}" alt="">
+    
+                    </div>
+                </div>
+            </div>
+    
+            
         </div>
+    
     </div>
+    
+    
+    <button class="btn btn-add" (click)="finish()"><h3>Add CarShop</h3><span class="material-icons">add_task</span></button>
 </div>
 
-<button (click)="finish()">Add CarShop</button>
-<button (click)="skip()">skip</button>

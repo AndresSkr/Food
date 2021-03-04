@@ -37,10 +37,6 @@ export class CustomizeComponent implements OnInit {
     this.validateControl();
   }
 
-  skip(){
-    this.validateControl();
-  }
-
   validateControl(){
     this.control +=1;
     if(this.control>=this.itemBuy.steps.length){

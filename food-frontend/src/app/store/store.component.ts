@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Food } from '../interface/food';
 import { StoreService } from './store.service';
 
 @Component({
@@ -10,15 +11,14 @@ export class StoreComponent implements OnInit {
 
   constructor(private service: StoreService) { }
 
-
-  food;
+  food : Food[];
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    this.service.getDataApi().then(p => {
-      this.food = p.valueOf();
+    this.service.getDataApi().then(p=> {
+      this.food = p;
     });
   }
 
@@ -26,6 +26,7 @@ export class StoreComponent implements OnInit {
   customizing = false;
   itemBuy;
   total = 0;
+  
   change() {
     this.customizing = !this.customizing;
   }

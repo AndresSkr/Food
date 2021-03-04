@@ -1,6 +1,9 @@
 {
   "name": "food-frontend",
   "version": "0.0.0",
+  "author": "Andres",
+  "description": "My Electron app",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
