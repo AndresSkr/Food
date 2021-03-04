@@ -13,11 +13,11 @@
   <div class="container-fluid">
     <div class=row>
       <div class="col-8 list">
-        <app-food-list [food]="food" (selectedClick)="clickBuyItem($event)" *ngIf="selected"></app-food-list>
-        <app-customize *ngIf="!selected"  [itemBuy]="itemBuy" (final)="final($event)"></app-customize>
+        <app-food-list [food]="food" (selectedClick)="clickBuyItem($event)" *ngIf="!customizing"></app-food-list>
+        <app-customize *ngIf="customizing"  [itemBuy]="itemBuy" (final)="final($event)"></app-customize>
       </div>
       <div class="col-4 facture ">
-        <app-facture [carShop]="carShop" (buyFinish)="buyFinish()"></app-facture>
+        <app-facture [carShop]="carShop" [total]=total (FinishedBuy)="buyFinish($event)"></app-facture>
       </div>
     </div>
   </div>

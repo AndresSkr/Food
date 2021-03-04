@@ -9,12 +9,28 @@ export class FactureComponent implements OnInit {
 
   constructor() { }
   @Input() carShop
-  @Output() buyFinish = new EventEmitter();
+  @Input() total
+  @Output() FinishedBuy = new EventEmitter();
   ngOnInit(): void {
   }
 
-  buy(){
-    this.buyFinish.emit();
+
+  finish(confirmBuy){
+
+    this.FinishedBuy.emit(confirmBuy);
   }
+
+  buy(){
+    this.finish(true);
+  }
+
+  cancelBuy(){
+    if(confirm('Do you Wanna cancel the order?')){
+      this.finish(false);
+    }
+  
+  }
+
+
 
 }

@@ -8,7 +8,7 @@ import { StoreService } from './store.service';
 })
 export class StoreComponent implements OnInit {
 
-  constructor(private service:StoreService) { }
+  constructor(private service: StoreService) { }
 
 
   food;
@@ -16,33 +16,51 @@ export class StoreComponent implements OnInit {
     this.getData();
   }
 
-  getData(){
-    this.service.getDataApi().then(p=>{
-      this.food=p.valueOf();
+  getData() {
+    this.service.getDataApi().then(p => {
+      this.food = p.valueOf();
     });
   }
 
-  carShop=[];
-  selected = true;
+  carShop = [];
+  customizing = false;
   itemBuy;
-
-  change(){
-    this.selected = !this.selected;
+  total = 0;
+  change() {
+    this.customizing = !this.customizing;
   }
-  
-  clickBuyItem(itemSelectedBuy){
+
+  clickBuyItem(itemSelectedBuy) {
     this.change();
     this.itemBuy = itemSelectedBuy;
-    
+
   }
 
-  final(itemCustomized){
+  final(itemCustomized) {
     this.carShop.push(itemCustomized);
+    this.calculateTotal(itemCustomized.price)
     this.change();
-
   }
 
-  buyFinish(){
+  buyFinish(confirmBuy) {
+    
+    if (confirmBuy) {
+      /* Code send backend petition and other*/
+      alert('Buy Done')
+    }else{
+      alert('successfully canceled')
+    }
+    this.rest();
+  }
+
+  rest() {
     this.carShop = [];
+    this.total = 0;
+  }
+
+  calculateTotal(priceItemSelectedCustom) {
+    this.total += priceItemSelectedCustom;
+    console.log(this.total);
+
   }
 }
