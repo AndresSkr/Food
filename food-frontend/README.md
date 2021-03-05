@@ -18,15 +18,13 @@ $ npm  start
 
 Para que la aplicacion funciones en electron se debe seguir los siguientes pasos
 
-## Build
+### Build
 ```bash
 # build
 $ ng build --base-href "./"
-# Ejecutar con electron
-$ npm run electron-start
 
 ```
-## Ejecutar electron
+### Ejecutar electron
 
 ```bash
 # Ejecutar con electron
