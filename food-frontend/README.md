@@ -14,7 +14,7 @@ $ npm install
 # Desarrollador
 $ npm  start
 ```
-##Ejecutar la aplicacion del lado del cliente con electron
+## Ejecutar la aplicacion del lado del cliente con electron
 
 Para que la aplicacion funciones en electron se debe seguir los siguientes pasos
 
@@ -49,7 +49,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * food-list -app-food-list
 
 ## Metodos y variables de los componentes
-###Store (Main)
+### Store (Main)
 
 
 | Variables | Tipo|Funcion  |
@@ -72,7 +72,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 |`calculateTotal()`| priceItemSelectedCustom : Number | Va acomulando los precios en la variable `total` con el parametro que se envia `priceItemSelectedCustom` |no retorna|
 
 
-###food-list -app-food-list
+### food-list -app-food-list
 | Variables | Tipo|Funcion  |
 | ----------  | ---: |-----:  |
 |  ` food`  | @Input| Alimentos que vienen del componente `app-store` para mostar en el html  |  
@@ -83,7 +83,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 |  ` clickSelectItem()`  | item : Food| valida si el item esta disponible para emitir el valor con `selectedClick`   | no retorna  |
 
 
-###customize - app-customize
+### customize - app-customize
 | Variables | Tipo|Funcion  |
 | ----------  | ---: |-----:  |
 |  ` itemBuy`  | @Input| Alimento que vienen del componente `app-store` para mostar en el html y poder personalizarlo |  
@@ -99,7 +99,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 |  ` validateControl()`  | sin parametros | Aumenta la variable  `control` para controlar la vista, con el tamaño de la de `step` de la variable `itemBuy`   | no retorna  |
 
 
-###facture - app-facture 
+### facture - app-facture 
 | Variables | Tipo|Funcion  |
 | ----------  | ---: |-----:  |
 |  ` carShop`  | @Input| Lista  con los alimentos personalizados que vienen del componente `app-store` para mostar en el html |  
