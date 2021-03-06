@@ -8,9 +8,9 @@ describe('FoodListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FoodListComponent ]
+      declarations: [FoodListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,10 @@ describe('FoodListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('There is h1 tag with text LIST FOOD', () => {
+    const compiled =fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('LIST FOOD')
+  });
+
 });

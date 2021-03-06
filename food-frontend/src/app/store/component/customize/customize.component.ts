@@ -29,7 +29,7 @@ export class CustomizeComponent implements OnInit {
   }
 
   finish(){
-    this.final.emit(this.itemCustom);
+   this.final.emit(this.itemCustom);
   }
 
   select(stepSelected){

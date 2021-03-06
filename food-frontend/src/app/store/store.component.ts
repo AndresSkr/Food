@@ -61,7 +61,5 @@ export class StoreComponent implements OnInit {
 
   calculateTotal(priceItemSelectedCustom) {
     this.total += priceItemSelectedCustom;
-    console.log(this.total);
-
   }
 }

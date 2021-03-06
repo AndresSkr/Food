@@ -26,9 +26,6 @@ export class FactureComponent implements OnInit {
     if(confirm('Do you Wanna cancel the order?')){
       this.finish(false);
     }
-  
   }
-
-
 
 }

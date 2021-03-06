@@ -22,4 +22,13 @@ describe('FactureComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  /* it('Method BuyFinish Good', () => {
+    spyOn(window, 'alert');
+    component.buy();
+    expect(window.alert).toHaveBeenCalledWith('Buy Done')
+    component.cancelBuy();
+    expect(window.alert).toHaveBeenCalledWith('successfully canceled') 
+  }); */
+
 });
