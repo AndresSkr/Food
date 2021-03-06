@@ -55,11 +55,11 @@ describe('StoreComponent', () => {
   it('Add item custom to carShop', () => {
 
     let itemcustom = {
-      name: "hamburgueza",
+      name: "hamburguesa",
       price: 5000
     }
     let itemcustom2 = {
-      name: "hamburgueza",
+      name: "hamburguesa",
       price: 3500
     }
     component.clickBuyItem(itemcustom);

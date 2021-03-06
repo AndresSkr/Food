@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Food } from 'src/app/interface/food';
 
 @Component({
   selector: 'app-food-list',
@@ -6,25 +7,20 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-
+  
   constructor() { }
 
-
-  @Input() food;
+  @Input() food:Food;
   @Output() selectedClick = new EventEmitter();
   ngOnInit(): void {
   }
 
-
-
   clickSelectItem(item){
-
     if(item.available){
       this.selectedClick.emit(item); 
     }else{
       alert('Item not available')
     }
-     
   }
 
 }

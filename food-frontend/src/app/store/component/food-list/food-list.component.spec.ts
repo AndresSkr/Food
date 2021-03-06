@@ -28,4 +28,14 @@ describe('FoodListComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('LIST FOOD')
   });
 
+  it('Item not available', () => {
+    let itemNotAvailable = {
+      name:'papas',
+      available:false
+    }
+    spyOn(window,'alert');
+    component.clickSelectItem(itemNotAvailable);
+    expect(window.alert).toHaveBeenCalledWith('Item not available')
+  });
+
 });

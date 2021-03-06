@@ -9,7 +9,7 @@ export class FactureComponent implements OnInit {
 
   constructor() { }
   @Input() carShop
-  @Input() total
+  @Input() total:number
   @Output() FinishedBuy = new EventEmitter();
   ngOnInit(): void {
   }

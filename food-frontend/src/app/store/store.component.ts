@@ -24,8 +24,8 @@ export class StoreComponent implements OnInit {
 
   carShop = [];
   customizing = false;
-  itemBuy;
-  total = 0;
+  itemBuy:Food;
+  total:number = 0;
   
   change() {
     this.customizing = !this.customizing;

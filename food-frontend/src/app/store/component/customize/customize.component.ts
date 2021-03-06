@@ -12,7 +12,7 @@ export class CustomizeComponent implements OnInit {
 
   @Input() itemBuy;
   @Output() final = new EventEmitter();
-  control = 0;
+  control:number = 0;
   itemCustom = {
     name:undefined,
     price: undefined,
