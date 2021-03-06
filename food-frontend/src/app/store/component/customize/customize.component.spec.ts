@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { StoreService } from '../../store.service';
+import { StoreService } from '../../services/store.service';
 
 import { CustomizeComponent } from './customize.component';
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Food } from '../interface/food';
-import { StoreService } from './store.service';
+import { Food } from './interface/food';
+import { StoreService } from './services/store.service';
 
 @Component({
   selector: 'app-store',
